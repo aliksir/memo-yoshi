@@ -30,6 +30,7 @@ Two files installed:
 | `/memo tidy` | Organizes messy memos into categories (URLs, TODOs, Ideas) |
 | `/memo add check Node version` | Appends a timestamped memo |
 | `/memo act` | Analyzes memos and takes action (opens URLs, runs checks, etc.) |
+| `/memo done` | Marks completed items with `終わりヨシッ！` (skipped by read/act) |
 
 Anything after `/memo` that isn't a subcommand is treated as a memo to add:
 
@@ -72,6 +73,7 @@ If you want Claude to automatically read your memos at the start of each session
 
 - **Memos are never deleted automatically.** `/memo tidy` organizes, it doesn't remove.
 - **`/memo act` never runs destructive operations.** Implementation requests require your confirmation.
+- **`終わりヨシッ！` items are skipped.** `/memo read` and `/memo act` ignore completed items unless you explicitly ask to include them.
 - Works with any text editor. No special app needed.
 
 ## Requirements
