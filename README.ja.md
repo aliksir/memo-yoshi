@@ -78,9 +78,13 @@ bash memo-yoshi/install.sh
 - **`終わりヨシッ！` 付き項目はスキップされる。** `/memo read` と `/memo act` は完了済み項目を無視する。「全部読んで」と指定した場合のみ表示。
 - 好きなテキストエディタで使える。専用アプリ不要。
 
+## Claude Coworkでも使える
+
+MEMO-YOSHIはClaude CodeとClaude Coworkの両方で動作する。Bashが使えない環境（Cowork等）では、ブラウザ起動やコマンド実行を手動案内に自動切替 — それ以外（read、tidy、add、done）はそのまま動く。
+
 ## 必要なもの
 
-- Claude Code（どのプランでもOK）
+- Claude Code または Claude Cowork
 - テキストエディタ（もう持ってるやつ）
 
 ## ライセンス

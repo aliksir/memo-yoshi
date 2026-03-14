@@ -78,9 +78,13 @@ If you want Claude to automatically read your memos at the start of each session
 - **`終わりヨシッ！` items are skipped.** `/memo read` and `/memo act` ignore completed items unless you explicitly ask to include them.
 - Works with any text editor. No special app needed.
 
+## Works with Claude Cowork too
+
+MEMO-YOSHI works in both Claude Code and Claude Cowork. In environments without Bash (like Cowork), browser launches and command execution are replaced with manual guidance — everything else (read, tidy, add, done) works the same.
+
 ## Requirements
 
-- Claude Code (any plan)
+- Claude Code or Claude Cowork
 - A text editor (you already have one)
 
 ## License
