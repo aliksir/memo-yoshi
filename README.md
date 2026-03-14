@@ -6,7 +6,7 @@
 
 ## What is this?
 
-A sticky note for Claude Code. Write memos in a Markdown file, and Claude reads, organizes, and acts on them.
+A sticky note for Claude Code — born from the [neko-gundan](https://github.com/aliksir/neko-gundan) multi-agent framework. Write memos in a Markdown file, and Claude reads, organizes, and acts on them.
 
 **The problem:** You think of something while Claude is processing, or while you're away from your desk. By the time you can tell Claude, you've forgotten.
 
