@@ -1,5 +1,7 @@
 # MEMO-YOSHI 📝
 
+**[日本語版はこちら](README.ja.md)**
+
 > Claude Code への付箋。思いついたことを何でも書いておく場所。
 
 ## What is this?
