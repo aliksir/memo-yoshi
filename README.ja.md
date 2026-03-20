@@ -29,7 +29,7 @@ bash memo-yoshi/install.sh
 |---------|------|
 | `/memo` | MEMO-YOSHI.md をデフォルトエディタで開く |
 | `/memo read` | メモを読み込んでセッションに取り込む |
-| `/memo tidy` | 雑多なメモをカテゴリ分けして整理（URL、TODO、アイデア） |
+| `/memo tidy` | 完了済みメモを `MEMO-YOSHI-archive.md` にアーカイブし、残りをカテゴリ整理 |
 | `/memo add Nodeバージョン確認` | タイムスタンプ付きでメモを追記 |
 | `/memo act` | メモを解析してアクション実行（URL開く、確認実行など） |
 | `/memo done` | 完了項目に `終わりヨシッ！` マーク（read/actでスキップされる） |
@@ -73,9 +73,9 @@ bash memo-yoshi/install.sh
 
 ## ルール
 
-- **メモは自動削除されない。** `/memo tidy` は整理するだけ。削除はしない。
+- **メモは削除されない。** `/memo tidy` は完了済みをアーカイブファイルに移動し、残りを整理する。何も失われない。
 - **`/memo act` は破壊的操作をしない。** 実装・修正系の依頼は確認を求める。
-- **`終わりヨシッ！` 付き項目はスキップされる。** `/memo read` と `/memo act` は完了済み項目を無視する。「全部読んで」と指定した場合のみ表示。
+- **`終わりヨシッ！` 付き項目はアーカイブされる。** `/memo tidy` で `MEMO-YOSHI-archive.md` に移動。`/memo read` と `/memo act` はスキップする。
 - 好きなテキストエディタで使える。専用アプリ不要。
 
 ## Claude Coworkでも使える
