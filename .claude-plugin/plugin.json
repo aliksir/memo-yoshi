@@ -1,0 +1,13 @@
+{
+  "name": "memo-yoshi",
+  "version": "1.0.0",
+  "description": "Sticky notes for Claude Code — read, organize, act on, and complete memos with simple slash commands",
+  "author": {
+    "name": "aliks",
+    "url": "https://github.com/aliksir"
+  },
+  "homepage": "https://github.com/aliksir/memo-yoshi",
+  "repository": "https://github.com/aliksir/memo-yoshi",
+  "license": "MIT",
+  "keywords": ["memo", "notes", "productivity", "organization", "todo"]
+}
