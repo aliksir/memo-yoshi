@@ -29,7 +29,7 @@ Two files installed:
 |---------|-------------|
 | `/memo` | Opens MEMO-YOSHI.md in your default editor |
 | `/memo read` | Reads memos into the current Claude session |
-| `/memo tidy` | Archives completed items to `MEMO-YOSHI-archive.md`, then organizes remaining memos into categories |
+| `/memo tidy` | Archives `終わりヨシッ！` items to `MEMO-YOSHI-archive.md`, organizes remaining into categories (URL, TODO, Ideas, Reference) |
 | `/memo add check Node version` | Appends a timestamped memo |
 | `/memo act` | Analyzes memos and takes action (opens URLs, runs checks, etc.) |
 | `/memo done` | Marks completed items with `終わりヨシッ！` (skipped by read/act) |
@@ -71,12 +71,29 @@ If you want Claude to automatically read your memos at the start of each session
 - Read `~/.claude/MEMO-YOSHI.md` if it exists
 ```
 
+## Tidy Archive
+
+When you run `/memo tidy`, completed items (`終わりヨシッ！` marked) are moved to `MEMO-YOSHI-archive.md` — a separate file in the same directory. Remaining items are organized into 4 categories:
+
+- **URL / Links** — memos containing URLs
+- **TODO / Requests** — action items ("do X", "check Y", etc.)
+- **Ideas / Notes** — free-form memos
+- **Reference** — knowledge items to keep but not act on
+
+The archive file is date-grouped for easy browsing.
+
 ## Rules
 
 - **Memos are never deleted.** `/memo tidy` moves completed items to an archive file and organizes the rest — nothing is lost.
 - **`/memo act` never runs destructive operations.** Implementation requests require your confirmation.
 - **`終わりヨシッ！` items are archived.** `/memo tidy` moves them to `MEMO-YOSHI-archive.md`. `/memo read` and `/memo act` skip them.
 - Works with any text editor. No special app needed.
+
+## Gotchas
+
+- **File search order**: Current directory `MEMO-YOSHI.md` takes priority over `~/.claude/MEMO-YOSHI.md`. If both exist, the current directory version is used.
+- **`/memo act` is safe**: It opens URLs and runs checks — never executes "fix X" or "implement Y" without your confirmation.
+- **`終わりヨシッ！` items are invisible**: They're skipped by `read` and `act`. To see them, explicitly ask "show all including completed".
 
 ## Works with Claude Cowork too
 
